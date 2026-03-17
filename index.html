@@ -167,7 +167,7 @@
             padding: 4rem 0 5rem;
             position: relative;
             overflow: hidden;
-            background-image: url('images/goku.jpg');
+            background-image: url('goku.jpg'); /* CHANGED: removed images/ */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1067,7 +1067,7 @@
             document.querySelectorAll('.video-btn[data-video]').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const videoFile = this.dataset.video; // 'noli' or 'luna'
-                    const videoSrc = `videos/${videoFile}.mp4`;
+                    const videoSrc = `${videoFile}.mp4`; // CHANGED: removed videos/ folder
                     modalVideo.querySelector('source').src = videoSrc;
                     modalVideo.load(); // required to update source
                     videoModal.classList.add('active');
